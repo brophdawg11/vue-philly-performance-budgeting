@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>Welcome to my App!</h1>
-    <h3>Today's date is {{date}}</h3>
-    <h3>Today's weather is ... {{weather}}</h3>
+    <h3>The date and time is {{date}}</h3>
+    <h3>The weather is ... {{weather}}</h3>
   </div>
 </template>
 
@@ -11,9 +11,18 @@ export default {
   name: 'app',
   data() {
     return {
-      date: new Date().toISOString(),
-      weather: 'Sunny?'
+      date: null,
+      weather: 'Clear?',
     };
+  },
+  methods: {
+    setDate() {
+      this.date = new Date().toISOString();
+    }
+  },
+  created() {
+    this.setDate();
+    setInterval(() => this.setDate(), 1000);
   },
 };
 </script>
