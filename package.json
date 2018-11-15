@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "dev": "rm -rf dist && NODE_ENV=development vue-cli-service build && cd dist && python -m SimpleHTTPServer",
+    "prod": "rm -rf dist && NODE_ENV=production vue-cli-service build && cd dist && python -m SimpleHTTPServer"
   },
   "dependencies": {
     "vue": "^2.5.17",
@@ -13,6 +15,10 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-service": "^3.1.4",
+    "jquery": "3.3.1",
+    "lodash": "4.17.11",
+    "lodash-es": "4.17.11",
+    "moment": "2.22.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"

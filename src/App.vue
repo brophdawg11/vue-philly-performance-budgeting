@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Welcome to my App!</h1>
+    <h3>Today's date is {{date}}</h3>
+    <h3>Today's weather is ... {{weather}}</h3>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      date: new Date().toISOString(),
+      weather: 'Sunny?'
+    };
+  },
+};
 </script>
 
 <style lang="scss">
