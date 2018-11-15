@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   name: 'app',
   data() {
@@ -17,7 +19,7 @@ export default {
   },
   methods: {
     setDate() {
-      this.date = new Date().toISOString();
+      this.date = moment().format('MMMM Do YYYY, h:mm:ss a');
     }
   },
   created() {
