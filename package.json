@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "dev": "rm -rf dist && NODE_ENV=development vue-cli-service build && cd dist && python -m SimpleHTTPServer",
-    "prod": "rm -rf dist && NODE_ENV=production vue-cli-service build && cd dist && python -m SimpleHTTPServer"
+    "prod": "rm -rf dist && NODE_ENV=production vue-cli-service build && cd dist && python -m SimpleHTTPServer",
+    "pwmetrics": "pwmetrics --config pwmetrics.config.js http://localhost:8000"
   },
   "dependencies": {
     "lighthouse": "4.0.0-alpha.1",
