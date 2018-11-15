@@ -10,5 +10,9 @@ module.exports = {
             }),
             new Visualizer(),
         ],
+        performance: {
+            hints: 'warning',
+            maxEntrypointSize: 130000 * 3,
+        }
     },
 };
